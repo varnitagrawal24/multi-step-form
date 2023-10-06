@@ -20,6 +20,61 @@
     --magnolia: hsl(217, 100%, 97%);
     --alabaster: hsl(231, 100%, 99%);
     --white: hsl(0, 0%, 100%);
-
-    
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--magnolia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    width: 80%;
+    height: 80%;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+#sidebar{
+    height: 100%;
+    width: 25%;
+    min-width: 14rem;
+    background-image: url("images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.sidebar-button{
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+.button-logo{
+    font-weight: 700;
+    color: var(--alabaster);
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid var(--alabaster);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-step{
+    text-transform: uppercase;
+    color: var(--cool-gray);
+    font-size: .8rem;
+    margin-bottom: .2rem;
+}
+.button-info{
+    text-transform: uppercase;
+    color: var(--alabaster);
+    font-weight: 500;
+}
+.button-active{
+    background-color: var(--pastel-blue);
+    color: black;
 }
