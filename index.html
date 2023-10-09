@@ -10,14 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <main>
       <div id="sidebar">
         <div class="sidebar-button">
-          <div class="button-logo button-active">1</div>
+          <div class="button-logo">1</div>
           <div class="button-detail">
             <div class="button-step">Step 1</div>
             <div class="button-info">Your info</div>
@@ -43,6 +43,222 @@
             <div class="button-step">Step 4</div>
             <div class="button-info">Summary</div>
           </div>
+        </div>
+      </div>
+      <div id="side-container">
+        <div class="main-container">
+          <div class="sub-container">
+            <div class="heading">Personal info</div>
+            <div class="sub-heading">
+              Please provide your name, email address, and phone number.
+            </div>
+            <div class="body">
+              <form action="">
+                <div class="entry">
+                  <div class="labels">
+                    <label for="name">Name</label>
+                    <span id="name-error" class="error"></span>
+                  </div>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="e.g. Stephen King"
+                  />
+                </div>
+                <div class="entry">
+                  <div class="labels">
+                    <label for="email">Email Address</label>
+                    <span class="error" id="email-error"></span>
+                  </div>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="e.g. stephenking@lorem.com"
+                  />
+                </div>
+                <div class="entry">
+                  <div class="labels">
+                    <label for="phone">Phone Number</label>
+                    <span class="error" id="phone-error"></span>
+                  </div>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="e.g. +1 234 567 890"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="sub-container">
+            <div class="heading">Select your plan</div>
+            <div class="sub-heading">
+              You have the option of monthly or yearly billing.
+            </div>
+            <div class="body">
+              <div class="step-2">
+                <div class="select-plan">
+                  <div class="plan-card plan-card-active">
+                    <img src="images/icon-arcade.svg" alt="1" />
+                    <div class="plan-detail">
+                      <div class="plan-name">Arcade</div>
+                      <div class="plan-price">
+                        $<span class="plan-rate"></span>/<span
+                          class="plan-duration"
+                        ></span>
+                      </div>
+                      <div class="plan-offer">2 months free</div>
+                    </div>
+                  </div>
+                  <div class="plan-card">
+                    <img src="images/icon-advanced.svg" alt="2" />
+                    <div class="plan-detail">
+                      <div class="plan-name">Advanced</div>
+                      <div class="plan-price">
+                        $<span class="plan-rate"></span>/<span
+                          class="plan-duration"
+                        ></span>
+                      </div>
+                      <div class="plan-offer">2 months free</div>
+                    </div>
+                  </div>
+                  <div class="plan-card">
+                    <img src="images/icon-pro.svg" alt="3" />
+                    <div class="plan-detail">
+                      <div class="plan-name">Pro</div>
+                      <div class="plan-price">
+                        $<span class="plan-rate"></span>/<span
+                          class="plan-duration"
+                        ></span>
+                      </div>
+                      <div class="plan-offer">2 months free</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="select-time-period">
+                  <span class="time">Monthly</span>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                  <span class="time">Yearly</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-container">
+            <div class="heading">Pick add-ons</div>
+            <div class="sub-heading">
+              Add-ons help enhance your gaming experience.
+            </div>
+            <div class="body">
+              <div class="step-3">
+                <label for="online-service">
+                  <input
+                    type="checkbox"
+                    id="online-service"
+                    class="add-on-checkbox"
+                  />
+                  <div class="add-on-service">
+                    <div class="add-on-name">Online service</div>
+                    <div class="add-on-detail">Access to multiplayer games</div>
+                  </div>
+                  <div class="add-on-price">
+                    +$<span class="add-on-rate"></span>/<span
+                      class="plan-duration"
+                    ></span>
+                  </div>
+                </label>
+                <label for="large-storage">
+                  <input
+                    type="checkbox"
+                    id="large-storage"
+                    class="add-on-checkbox"
+                  />
+                  <div class="add-on-service">
+                    <div class="add-on-name">Larger storage</div>
+                    <div class="add-on-detail">Extra 1TB of cloud save</div>
+                  </div>
+                  <div class="add-on-price">
+                    +$<span class="add-on-rate"></span>/<span
+                      class="plan-duration"
+                    ></span>
+                  </div>
+                </label>
+                <label for="customizable-profile">
+                  <input
+                    type="checkbox"
+                    id="customizable-profile"
+                    class="add-on-checkbox"
+                  />
+                  <div class="add-on-service">
+                    <div class="add-on-name">Customizable Profile</div>
+                    <div class="add-on-detail">
+                      Custom theme on your profile
+                    </div>
+                  </div>
+                  <div class="add-on-price">
+                    +$<span class="add-on-rate"></span>/<span
+                      class="plan-duration"
+                    ></span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="sub-container">
+            <div class="heading">Finishing up</div>
+            <div class="sub-heading">
+              Double-check everything looks OK before confirming.
+            </div>
+            <div class="body">
+              <div class="step-4">
+                <div class="summary">
+                  <div class="plan-summary">
+                    <div class="plan-summary-name">
+                      <span class="summary-card-name"></span> (<span
+                        class="duration-summary"
+                      ></span
+                      >)
+                      <div class="change">Change</div>
+                    </div>
+                    <div class="plan-summary-price">
+                      $<span class="plan-summary-rate"></span>/<span
+                        class="plan-duration"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="add-on-summary"></div>
+                </div>
+                <div class="total">
+                  <div class="total-head">
+                    Total(per <span class="duration-summary-total"></span>)
+                  </div>
+                  <div class="total-price">
+                    $<span class="total-rate"></span>/<span
+                      class="plan-duration"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-container">
+            <div class="thank-you-section">
+              <div class="heading">Thank you!</div>
+              <div class="sub-heading">
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </div>
+        <div class="button-section">
+          <button id="backward" class="backward">Go Back</button>
+          <button id="forward" class="forward">Next Step</button>
         </div>
       </div>
     </main>

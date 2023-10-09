@@ -1,80 +1,471 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* HTML */
-:root{
-    font-size: 16px;
+:root {
+  font-size: 16px;
 
-    /* colors */
-    --marine-blue:hsl(213, 96%, 18%);
-    --purplish-blue: hsl(243, 100%, 62%);
-    --pastel-blue: hsl(228, 100%, 84%);
-    --light-blue: hsl(206, 94%, 87%);
-    --strawberry-red: hsl(354, 84%, 57%);
-    --cool-gray: hsl(231, 11%, 63%);
-    --light-gray: hsl(229, 24%, 87%);
-    --magnolia: hsl(217, 100%, 97%);
-    --alabaster: hsl(231, 100%, 99%);
-    --white: hsl(0, 0%, 100%);
+  /* colors */
+  --marine-blue: hsl(213, 96%, 18%);
+  --m-blue: hsl(213, 53%, 40%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --purplish-blue-lg: hsl(243, 100%, 71%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
 }
-body{
-    width: 100vw;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--magnolia);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  width: 80%;
+  height: 80%;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+#sidebar {
+  height: 100%;
+  width: 20%;
+  min-width: 14rem;
+  background-image: url("images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.sidebar-button {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.button-logo {
+  font-weight: 700;
+  color: var(--alabaster);
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--alabaster);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-step {
+  text-transform: uppercase;
+  color: var(--cool-gray);
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.button-info {
+  text-transform: uppercase;
+  color: var(--alabaster);
+  font-weight: 500;
+}
+.button-active {
+  background-color: var(--pastel-blue);
+  color: black;
+}
+/* side container */
+#side-container {
+  height: 100%;
+  flex-basis: 60%;
+  flex-grow: 1;
+  padding: 2% 5%;
+}
+.main-container {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+.sub-container {
+  height: 100%;
+  width: 100%;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.sub-heading {
+  font-weight: 300;
+  color: var(--cool-gray);
+  margin-bottom: 1rem;
+}
+/* step-1 */
+.entry {
+  margin-bottom: 1rem;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+.entry label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.entry input {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.entry input:focus {
+  border-color: var(--marine-blue);
+  outline: none;
+}
+.entry input:hover {
+  border-color: var(--marine-blue);
+}
+.error {
+  color: var(--strawberry-red);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.error-input {
+  border-color: var(--strawberry-red) !important;
+}
+
+/* step 2 */
+.step-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.select-plan {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.plan-card {
+  border: 2px solid var(--light-gray);
+  width: 18%;
+  min-width: 6rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.plan-card img {
+  margin-bottom: 3rem;
+}
+.plan-name {
+  font-weight: 500;
+}
+.plan-price {
+  color: var(--cool-gray);
+  font-size: 0.9rem;
+}
+.plan-offer {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.plan-card:hover {
+  border-color: var(--marine-blue);
+}
+.select-time-period {
+  background-color: var(--alabaster);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.time {
+  color: var(--cool-gray);
+}
+.time-active {
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+.plan-card-active {
+  background-color: var(--light-blue);
+  border-color: var(--marine-blue);
+}
+/* switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--marine-blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 1rem;
+  transform: scale(0.8);
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 15%;
+  left: 8%;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(2rem);
+}
+
+/* step 3 */
+.step-3 label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 0.8rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.step-3 input {
+  border-color: var(--light-gray);
+}
+.step-3 input:checked {
+  accent-color: var(--purplish-blue);
+}
+.add-on-active {
+  background-color: var(--light-blue);
+  border-color: var(--purplish-blue) !important;
+}
+.add-on-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-grow: 1;
+}
+.add-on-name {
+  font-weight: 500;
+}
+.add-on-detail {
+  color: var(--cool-gray);
+}
+.add-on-price {
+  font-weight: 500;
+  color: var(--purplish-blue);
+}
+.step-3 label:hover {
+  border-color: var(--purplish-blue);
+}
+
+/* step-4 */
+.summary {
+  background-color: var(--magnolia);
+  padding: 1rem;
+}
+.plan-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.plan-summary-name {
+  font-weight: 500;
+}
+.change {
+  text-decoration: underline;
+  font-size: 0.8rem;
+  color: var(--cool-gray);
+  cursor: pointer;
+}
+.change:hover {
+  color: var(--purplish-blue);
+}
+hr {
+  margin-bottom: 1rem;
+  border-color: var(--light-gray);
+}
+.plan-summary-price {
+  font-weight: 500;
+}
+.service-summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cool-gray);
+  margin-top: 1rem;
+}
+.total {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total-head {
+  color: var(--cool-gray);
+  font-weight: 500;
+}
+.total-price {
+  color: var(--purplish-blue);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+/* step 5 */
+.thank-you-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.thank-you-section .sub-heading {
+  text-align: center;
+}
+.thank-you-section .body {
+  background-image: url("images/icon-thank-you.svg");
+  width: 5rem;
+  height: 5rem;
+  order: -1;
+  margin: 1rem;
+}
+/* button section */
+.button-section {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.forward {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 7rem;
+  height: 3rem;
+  background-color: var(--marine-blue);
+  color: var(--alabaster);
+  border: none;
+  border-radius: 0.5rem;
+}
+.backward {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  color: var(--cool-gray);
+}
+.forward:hover {
+  background-color: var(--m-blue);
+}
+.backward:hover {
+  color: var(--marine-blue);
+}
+.confirm {
+  background-color: var(--purplish-blue);
+}
+.confirm:hover {
+  background-color: var(--purplish-blue-lg);
+}
+
+@media (max-width: 800px) {
+  body {
+    display: block;
     height: 100vh;
-    background-color: var(--magnolia);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-main{
-    width: 80%;
-    height: 80%;
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 1rem;
-}
-#sidebar{
+  }
+  main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
     height: 100%;
-    width: 25%;
-    min-width: 14rem;
-    background-image: url("images/bg-sidebar-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100%;
-    border-radius: 1rem;
-    padding: 2rem;
-}
-.sidebar-button{
+  }
+  #sidebar {
+    width: 100%;
+    height: 30%;
     display: flex;
-    margin-bottom: 1rem;
+    justify-content: space-evenly;
+    background-image: url("images/bg-sidebar-mobile.svg");
+    background-position: 80% 80%;
+    border-radius: 0;
+  }
+  .button-detail {
+    display: none;
+  }
+  #side-container {
+    width: 100%;
+    height: 70%;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
-}
-.button-logo{
-    font-weight: 700;
-    color: var(--alabaster);
-    height: 2rem;
-    width: 2rem;
-    border: 1px solid var(--alabaster);
-    border-radius: 50%;
+    padding: 0;
+    position: relative;
+  }
+  .main-container {
+    padding: 1rem;
+  }
+  .sub-container {
+    background-color: var(--white);
+    padding: 1rem;
+    position: absolute;
+    width: 90%;
+    height: auto;
+    top: -25%;
+    left: 5%;
+    border-radius: 1rem;
+  }
+  .sub-heading {
+    margin-bottom: 1rem;
+  }
+  .button-section {
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
+    height: auto;
+    border-radius: 0;
+  }
+  .step-2 {
+    gap: 1rem;
+  }
+  .select-plan {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .plan-card {
+    width: 100%;
+    height: 80%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.button-step{
-    text-transform: uppercase;
-    color: var(--cool-gray);
-    font-size: .8rem;
-    margin-bottom: .2rem;
-}
-.button-info{
-    text-transform: uppercase;
-    color: var(--alabaster);
-    font-weight: 500;
-}
-.button-active{
-    background-color: var(--pastel-blue);
-    color: black;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .plan-card img {
+    margin-bottom: 0;
+  }
+  .step-3 label {
+    padding: 0.8rem;
+  }
 }
